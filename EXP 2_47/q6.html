@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidential Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+        }
+
+        #email {
+            padding: 50px;
+            margin-top: 50px;
+            width: 70%;
+            height: 70%;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            background-color: #f4f1e1; /* Off-white paper-like color */
+            text-align: center;
+        }
+
+        #confidential, #top-secret {
+            display: inline-block;
+            padding: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+            border: 2px solid red; /* Red border */
+            color: red; /* Red text */
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #confidential {
+            transform: rotate(-10deg);
+        }
+
+        #top-secret {
+            transform: rotate(10deg);
+            display: block;
+            width: 100px;
+            margin-top: 30px; /* Move top-secret div to the bottom */
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .blurred {
+            filter: blur(3px);
+        }
+    </style>
+</head>
+<body>
+    <main id="email">
+        <div id="confidential">CONFIDENTIAL</div>
+
+        
+        <p>Dear <span class="blurred">Agent S'more</span>,</p>
+        <p>We have an emergency. The secret formula for our Mega Marshmallow has been compromised. This formula is what makes our marshmallows the fluffiest and most delicious.</p>
+        <p>We suspect that <span class="blurred">Professor Puff</span> is behind this. He has taken the formula to his hidden laboratory. Your mission is to infiltrate the lab and secure the formula before it's too late.</p>
+        <p>Be sure to keep the lab's location confidential. Any leak of this information could jeopardize the entire operation.</p>
+
+        <div id="top-secret">TOP SECRET</div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f1e1; /* Off-white color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 0 0 200px;
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .basic-plan {
+            order: 0;
+        }
+
+        .pro-plan {
+            order: 1;
+            flex-grow: 2;
+        }
+
+        .premium-plan {
+            order: 2;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Hover effect for "pop-up" animation */
+        .pricing-card:hover {
+            transform: scale(1.05); /* Make the card slightly bigger */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a popping effect */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Pricing Plans</h1>
+        <div class="pricing-container">
+            <div class="pricing-card basic-plan">
+                <h2>Basic</h2>
+                <p>$9/month</p>
+            </div>
+
+            <div class="pricing-card pro-plan">
+                <h2>Pro</h2>
+                <p>$19/month</p>
+            </div>
+
+            <div class="pricing-card premium-plan">
+                <h2>Premium</h2>
+                <p>$29/month</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

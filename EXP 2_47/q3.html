@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      padding: 40px;
+      color: #e2e8f0;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+      background: #111827;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 2px solid rgba(148, 163, 184, 0.25);
+      background: #0b1220;
+      color: #e2e8f0;
+      font-size: 14px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    /* 17. Style first input differently */
+    input:first-of-type {
+      border-radius: 18px;
+      border-style: dashed;
+    }
+
+    /* 11. Focus pseudo-class (list selector in order: input, textarea) */
+    input:focus,
+    textarea:focus {
+      border-color: #38bdf8;
+    }
+
+    /* 12. Invalid pseudo-class (list selector in order: input, select, textarea) */
+    input:invalid,
+    select:invalid,
+    textarea:invalid {
+      border-color: #fb7185;
+    }
+
+    /* 13. Valid pseudo-class (list selector in order: input, select, textarea) */
+    input:valid,
+    select:valid,
+    textarea:valid {
+      border-color: #34d399;
+    }
+
+    .radio-group {
+      margin-top: 16px;
+      padding: 14px 12px;
+      border-radius: 12px;
+      border: 2px solid rgba(148, 163, 184, 0.22);
+    }
+
+    .radio-group legend {
+      padding: 0 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .radio-group input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #38bdf8;
+      cursor: pointer;
+    }
+
+    /* 15-17. Checked radio styling (border/background/shadow) */
+    .radio-group input[type="radio"]:checked {
+      border-color: #38bdf8;
+      background-color: #38bdf8;
+      box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.25);
+    }
+
+    /* 16 + 18. Change label color when radio is checked */
+    .radio-group input[type="radio"]:checked + label {
+      color: #38bdf8;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 18px;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: #38bdf8;
+      color: #0b1220;
+      font-weight: 800;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    /* 14. Hover pseudo-class for button */
+    button:hover {
+      background: #34d399;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Job Application</h1>
+
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="position">Position</label>
+      <select id="position" required>
+        <option value="">Select a role</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="aiml">AIML Intern</option>
+        <option value="android">Android Developer</option>
+      </select>
+
+      <fieldset class="radio-group">
+        <legend>Availability</legend>
+
+        <div class="radio-option">
+          <input type="radio" id="full-time" name="availability" value="full-time" required />
+          <label for="full-time">Full-Time</label>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" id="part-time" name="availability" value="part-time" />
+          <label for="part-time">Part-Time</label>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" id="internship" name="availability" value="internship" />
+          <label for="internship">Internship</label>
+        </div>
+      </fieldset>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Tell us why you're a good fit..." required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

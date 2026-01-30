@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Documentation</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    #navbar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100vh;
+      background: linear-gradient(180deg, #1e3c72, #2a5298);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #navbar header {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .nav-link {
+      display: block;
+      color: #e0e0e0;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+      transform: translateX(6px);
+    }
+
+    #main-doc {
+      margin-left: 280px;
+      padding: 30px;
+    }
+
+    .main-section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .main-section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .main-section header {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    code {
+      display: block;
+      background: #f4f4f4;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      #navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+
+      #main-doc {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>Flexbox Guide</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Flex_Container">Flex Container</a>
+    <a class="nav-link" href="#Flex_Items">Flex Items</a>
+    <a class="nav-link" href="#Alignment">Alignment</a>
+    <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Flexbox is a layout model designed for one-dimensional layouts.</p>
+      <p>It simplifies spacing and alignment.</p>
+      <code>display: flex;</code>
+      <ul>
+        <li>Easy layouts</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Flex_Container">
+      <header>Flex Container</header>
+      <p>The container defines the layout direction.</p>
+      <p>It controls wrapping behavior.</p>
+      <code>flex-direction: row;</code>
+      <ul>
+        <li>Row and column</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Flex_Items">
+      <header>Flex Items</header>
+      <p>Flex items live inside the container.</p>
+      <p>They can grow or shrink.</p>
+      <code>flex: 1;</code>
+      <ul>
+        <li>Dynamic sizing</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Alignment">
+      <header>Alignment</header>
+      <p>Flexbox excels at alignment.</p>
+      <p>Both axes are controllable.</p>
+      <code>justify-content: center;</code>
+      <ul>
+        <li>Main axis</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Responsive_Design">
+      <header>Responsive Design</header>
+      <p>Flexbox helps build responsive layouts.</p>
+      <p>Media queries enhance flexibility.</p>
+      <code>@media (max-width: 768px)</code>
+      <ul>
+        <li>Mobile friendly</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>

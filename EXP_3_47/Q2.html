@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Playing Cards</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      font-family: Arial, sans-serif;
+    }
+
+    
+    #playing-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    
+    .card {
+      width: 160px;
+      height: 240px;
+      background: linear-gradient(135deg, #ffffff, #f2f2f2);
+      border-radius: 12px;
+      border: 2px solid black;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    
+    .card:hover {
+      transform: translateY(-12px) scale(1.05);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    
+    .left {
+      align-self: flex-start;
+      font-size: 1.4rem;
+    }
+
+    .middle {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2.5rem;
+    }
+
+    .right {
+      align-self: flex-end;
+      font-size: 1.4rem;
+      transform: rotate(180deg);
+    }
+
+    
+    .red {
+      color: #c62828;
+    }
+
+    .black {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <main id="playing-cards">
+    <div class="card black">
+      <div class="left">A ♠</div>
+      <div class="middle">
+        <div>♠</div>
+        <div>♠</div>
+        <div>♠</div>
+      </div>
+      <div class="right">A ♠</div>
+    </div>
+
+    <div class="card red">
+      <div class="left">K ♥</div>
+      <div class="middle">
+        <div>♥</div>
+        <div>♥</div>
+        <div>♥</div>
+      </div>
+      <div class="right">K ♥</div>
+    </div>
+
+    <div class="card black">
+      <div class="left">Q ♣</div>
+      <div class="middle">
+        <div>♣</div>
+        <div>♣</div>
+        <div>♣</div>
+      </div>
+      <div class="right">Q ♣</div>
+    </div>
+  </main>
+</body>
+</html>

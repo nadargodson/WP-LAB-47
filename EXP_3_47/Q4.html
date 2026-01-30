@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Daily Grid</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f4f1ec;
+      font-family: "Georgia", serif;
+      color: #222;
+    }
+
+    .newspaper-layout {
+      display: grid;
+      grid-template-areas:
+        "title title title"
+        "feature-article feature-article cover-image"
+        "secondary-article secondary-article cover-image"
+        "small-article1 small-article2 small-article3";
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr 1fr 1fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .title {
+      grid-area: title;
+      background: #e8e4dc;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #222;
+    }
+
+    .feature-article {
+      grid-area: feature-article;
+    }
+
+    .secondary-article {
+      grid-area: secondary-article;
+    }
+
+    .small-article1 {
+      grid-area: small-article1;
+    }
+
+    .small-article2 {
+      grid-area: small-article2;
+    }
+
+    .small-article3 {
+      grid-area: small-article3;
+    }
+
+    .cover-image {
+      grid-area: cover-image;
+      background: #e8e4dc;
+      padding: 10px;
+    }
+
+    article,
+    figure {
+      background: #ffffff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    article:hover,
+    figure:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    h2, h3 {
+      margin-top: 0;
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* Feature article image */
+    .feature-article img {
+      max-width: 100%;
+      display: block;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+    }
+
+    .cover-image img {
+      max-width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="newspaper-layout">
+
+    <header class="title">
+      <h1>The Daily Grid</h1>
+    </header>
+
+    <article class="feature-article">
+      <h2>Major Breakthrough in Web Layouts</h2>
+
+      <!-- Feature article image -->
+      <img src="https://via.placeholder.com/600x300" alt="Web layout illustration">
+
+      <p>
+        CSS Grid continues to revolutionize modern web design by allowing
+        developers to create complex layouts with clarity and precision.
+      </p>
+    </article>
+
+    <figure class="cover-image">
+      <img src="images (1).jpg" alt="Newspaper cover">
+    </figure>
+
+    <article class="secondary-article">
+      <h2>Design Trends Shift Toward Simplicity</h2>
+      <p>
+        Minimalist designs inspired by traditional newspapers are gaining
+        popularity for their readability and timeless aesthetic.
+      </p>
+    </article>
+
+    <article class="small-article1">
+      <h3>Tech</h3>
+      <p>Grid-based layouts improve maintainability.</p>
+    </article>
+
+    <article class="small-article2">
+      <h3>World</h3>
+      <p>Print-inspired design returns to the web.</p>
+    </article>
+
+    <article class="small-article3">
+      <h3>Culture</h3>
+      <p>Typography plays a key role in readability.</p>
+    </article>
+
+  </main>
+
+</body>
+</html>

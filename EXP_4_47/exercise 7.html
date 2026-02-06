@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Exercise 7 - Toggle Text</title>
+</head>
+<body>
+
+<h2>MAGIC its MAGIC</h2>
+
+
+
+<p id="demo">NIHAR IS MY GOOD FRIEND.</p>
+
+
+
+<button onclick="changeText()">Click Me</button>
+
+<script>
+    function changeText() {
+
+        let para = document.getElementById("demo");
+
+        if (para.innerHTML === "NIHAR IS MY GOOD FRIEND.") {
+            para.innerHTML = "BUT I SIT WITH RIWAN FOR THE WP LAB ^_~!";
+        } else {
+            para.innerHTML = "NIHAR IS MY GOOD FRIEND.";
+        }
+
+    }
+</script>
+
+</body>
+</html>
+

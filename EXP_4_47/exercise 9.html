@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Exercise 9 - Toggle Greeting</title>
+</head>
+<body>
+
+<h2>GREETINGS</h2>
+
+
+
+<p id="greet">Click me buddy.</p>
+
+
+
+<button onclick="showGreeting()">Click Me</button>
+
+<script>
+    function showGreeting() {
+
+        let para = document.getElementById("greet");
+
+        
+        if (para.textContent !== "Click me buddy.") {
+            para.textContent = "Click me buddy.";
+            return;
+        }
+
+       
+        let now = new Date();
+        let hour = now.getHours();
+        let message;
+
+        if (hour < 12) {
+            message = "Good Morning buddy";
+        } 
+        else if (hour >= 12 && hour < 17) {
+            message = "Good Afternoon buddy";
+        } 
+        else {
+            message = "Good Evening buddy";
+        }
+
+        para.textContent = message;
+    }
+</script>
+
+</body>
+</html>
+
